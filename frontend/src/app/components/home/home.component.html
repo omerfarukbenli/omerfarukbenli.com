@@ -1,0 +1,551 @@
+<div class="fh5co-loader"></div>
+
+<div id="page">
+  <header
+    id="fh5co-header"
+    class="fh5co-cover js-fullheight"
+    role="banner"
+    style="background-image: url(images/cover_bg_3.jpg)"
+    data-stellar-background-ratio="0.5"
+  >
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2 text-center">
+          <div class="display-t js-fullheight">
+            <div
+              class="display-tc js-fullheight animate-box"
+              data-animate-effect="fadeIn"
+            >
+              <div
+                class="profile-thumb"
+                style="background: url(../assets/images/a.JPG)"
+              ></div>
+
+              <div *ngFor="let cnt of home">
+                <h1>
+                  <span>{{ cnt.fullName }}</span>
+                </h1>
+                <h3><span>Full-Stack Developer</span></h3>
+              </div>
+              <p></p>
+
+              <ul class="fh5co-social-icons" *ngFor="let cnt of url">
+                <li>
+                  <a href="{{ cnt.linkedln }}"
+                    ><i class="icon-linkedin2"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="{{ cnt.github }}"><i class="icon-github2"></i></a>
+                </li>
+              </ul>
+              <!--blog sitesine giriş butonu-->
+              <a class="btn btn-default" style="color: white;" [routerLink]="['posts']"
+                >Blogumu ziyaret edin</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div id="fh5co-about" class="animate-box">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+          <h2 style="color: white">Hakkımda</h2>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">
+          <tr *ngFor="let cnt of home">
+            <ul class="info">
+              <li>
+                <li>
+                  <i class="icon-user"></i>&nbsp;<span style="color: white" >{{
+                    cnt.fullName
+                  }}</span>
+                </li>
+              <li>
+                <i class="icon-old-phone"></i>&nbsp;<span style="color: white" >{{
+                  cnt.phone
+                }}</span>
+              </li>
+              <li>
+                <i class="icon-map-pin"></i>&nbsp;<span style="color: white" >{{
+                  cnt.address
+                }}</span>
+              </li>
+              <li>
+                <i class="icon-mail"></i>&nbsp;<span  style="color: white" >{{
+                  cnt.email
+                }}</span>
+              </li>
+
+
+            </ul>
+          </tr>
+        </div>
+
+        <div class="col-md-8">
+          <h2 style="color: white">Merhaba!</h2>
+          <tr *ngFor="let cnt of about">
+            <p style="text-align: justify; color: white">{{ cnt.cvTurk }}</p>
+            <p style="text-align: justify; color: white">{{ cnt.cvEnglish }}</p>
+          </tr>
+          <p></p>
+          <ul class="fh5co-social-icons" *ngFor="let cnt of url">
+            <!--buraya linkleri koy-->
+            <li>
+              <a href="{{ cnt.linkedln }}"><i class="icon-linkedin2"></i></a>
+            </li>
+            <li>
+              <a href="{{ cnt.github }}"><i class="icon-github2"></i></a>
+            </li>
+            <li>
+              <a href="{{ cnt.youtube }}"><i class="icon-youtube2"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="fh5co-resume" class="fh5co-bg-color">
+    <div class="container">
+      <div class="row animate-box">
+        <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+          <h2 style="color: white">Özgeçmişim</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 col-md-offset-0">
+          <ul class="timeline">
+            <li class="timeline-heading text-center animate-box">
+              <div><h3>İş Deneyİmlerİm</h3></div>
+            </li>
+            <li class="animate-box timeline-unverted">
+              <div class="timeline-badge"><i class="icon-suitcase"></i></div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h3 style="color: white" class="timeline-title">
+                    Gayrimenkul Değerleme Uzm. Yar.
+                  </h3>
+                  <span class="company" style="color: #e2dcc8"
+                    >Zirve Gayrimenkul Değerleme A.Ş.- 2020 - 2021</span
+                  >
+                </div>
+                <div class="timeline-body">
+                  <p style="text-align: justify; color: #e2dcc8">
+                    Ekspertiz raporunun zorunlu tutulduğu kredili satış ve
+                    ipotek-ticari kredi başvurusu gibi süreçlerde, bankanın
+                    talep ettiği ekspertiz raporunun yazımı için; saha
+                    araştırması, resmi kurum incelemeleri, bedel tespiti ve
+                    nihayetinde ilgili raporun yazılıp, onaylanması süreçleri.
+                    (Kadrolu)
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-inverted animate-box">
+              <div class="timeline-badge"><i class="icon-suitcase"></i></div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h3 style="color: white" class="timeline-title">
+                    Gayrimenkul Değerleme Uzm. Yar.
+                  </h3>
+                  <span class="company" style="color: #e2dcc8"
+                    >Başkent Taşınmaz Değerleme A.Ş. - 2019 - 2020</span
+                  >
+                </div>
+                <div class="timeline-body">
+                  <p style="text-align: justify; color: #e2dcc8">
+                    Ekspertiz raporunun zorunlu tutulduğu kredili satış ve
+                    ipotek-ticari kredi başvurusu gibi süreçlerde, bankanın
+                    talep ettiği ekspertiz raporunun yazımı için; saha
+                    araştırması, resmi kurum incelemeleri, bedel tespiti ve
+                    nihayetinde ilgili raporun yazılıp, onaylanması süreçleri.
+                    (Çözüm Ortağı)
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="animate-box timeline-unverted">
+              <div class="timeline-badge"><i class="icon-suitcase"></i></div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h3 style="color: white" class="timeline-title">
+                    Gayrimenkul Değerleme Uzm. Yar.
+                  </h3>
+                  <span class="company" style="color: #e2dcc8"
+                    >Sümer Gayrimenkul Değ. ve Danş. A.Ş. - 2018 - 2019</span
+                  >
+                </div>
+                <div class="timeline-body">
+                  <p style="text-align: justify; color: #e2dcc8">
+                    Ekspertiz raporunun zorunlu tutulduğu kredili satış ve
+                    ipotek-ticari kredi başvurusu gibi süreçlerde, bankanın
+                    talep ettiği ekspertiz raporunun yazımı için; saha
+                    araştırması, resmi kurum incelemeleri, bedel tespiti ve
+                    nihayetinde ilgili raporun yazılıp, onaylanması süreçleri.
+                    (Kadrolu)
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <br />
+            <li class="timeline-heading text-center animate-box">
+              <div><h3>Eğİtİm</h3></div>
+            </li>
+            <li class="animate-box timeline-unverted">
+              <div class="timeline-badge">
+                <i class="icon-graduation-cap"></i>
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h3 style="color: white" class="timeline-title">
+                    SPK Değerleme Lisansı
+                  </h3>
+                  <span class="company" style="color: #e2dcc8"
+                    >Sermaye Piyasası Lisans Değerleme Belgesi - 2018</span
+                  >
+                </div>
+                <div class="timeline-body">
+                  <p></p>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-inverted animate-box">
+              <div class="timeline-badge">
+                <i class="icon-graduation-cap"></i>
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h3 style="color: white" class="timeline-title">
+                    Lisans Derecesi
+                  </h3>
+                  <span class="company" style="color: #e2dcc8"
+                    >Sakarya Üniversitesi - 2013 - 2016</span
+                  >
+                </div>
+                <div class="timeline-body">
+                  <p style="color: #e2dcc8">
+                    Çalışma Ekonomisi ve Endüstri İilişkileri Bölümü
+                  </p>
+                  <p style="color: #e2dcc8">Mezuniyet Not Ortalaması: 3.52</p>
+                </div>
+              </div>
+            </li>
+            <li class="animate-box timeline-unverted">
+              <div class="timeline-badge">
+                <i class="icon-graduation-cap"></i>
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h3 style="color: white" class="timeline-title">Lise</h3>
+                  <span class="company" style="color: #e2dcc8"
+                    >Ümraniye Anadolu Lisesi - 2008 - 2011</span
+                  >
+                </div>
+                <div class="timeline-body">
+                  <p></p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="fh5co-features" class="animate-box">
+    <div class="container">
+      <div class="services-padding">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+            <h2>Eğitim ve Sertifikalarım</h2>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4 text-center" *ngFor="let item of repo">
+            <div class="feature-left">
+              <span class="icon">
+                <img
+                  src="{{ item.url }}"
+                  style="
+                    border-radius: 50%;
+                    height: 150px;
+                    width: 150px;
+                    object-fit: cover;
+                  "
+                />
+              </span>
+              <div class="feature-copy">
+                <h3 style="color: #100720">{{ item.title }}</h3>
+                <h5 style="color: #100720">{{ item.contentSummary }}</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="col-md-4 text-center">
+						<div class="feature-left">
+							<span class="icon">
+								<img src="../assets/images/s2.jpg"  style="border-radius: 50%;
+                height:150px;
+                width: 150px;
+                object-fit: cover;"/>
+							</span>
+							<div class="feature-copy">
+								<h3 style="color:#100720 ;">Turkcell-Geleceği Yazanlar</h3>
+								<p style="color: black;">C# ile Algoritma ve Programlama 201 Sertifikası</p>
+							</div>
+						</div>
+
+					</div>
+					<div class="col-md-4 text-center">
+						<div class="feature-left">
+							<span class="icon">
+								<img src="../assets/images/s3.jpg"  style="border-radius: 50%;
+                height:150px;
+                width: 150px;
+                object-fit: cover;"/>
+							</span>
+							<div class="feature-copy">
+								<h3 style="color:#100720 ;">Turkcell-Geleceği Yazanlar</h3>
+								<p style="color: black;">Web Programlama 101 Sertifikası</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="row">
+					<div class="col-md-4 text-center">
+
+						<div class="feature-left">
+							<span class="icon">
+								<img src="../assets/images/s4.jpg"  style="border-radius: 50%;
+                height:150px;
+                width: 150px;
+                object-fit: cover;"/>
+							</span>
+							<div class="feature-copy">
+								<h3 style="color:#100720 ;">Turkcell-Geleceği Yazanlar</h3>
+								<p style="color: black;">Web Programlama 201 Sertifikası</p>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="col-md-4 text-center">
+						<div class="feature-left">
+							<span class="icon">
+								<img src="../assets/images/s5.jpg"  style="border-radius: 50%;
+                height:150px;
+                width: 150px;
+                object-fit: cover;"/>
+							</span>
+							<div class="feature-copy">
+								<h3 style="color:#100720 ;">Turkcell-Geleceği Yazanlar</h3>
+								<p style="color: black;">Web Programlama 301 Sertifikası</p>
+							</div>
+						</div>
+
+					</div>
+          <div class="col-md-4 text-center">
+						<div class="feature-left">
+							<span class="icon">
+								<img src="../assets/images/s6.jpg"  style="border-radius: 50%;
+                height:150px;
+                width: 150px;
+                object-fit: cover;"/>
+							</span>
+							<div class="feature-copy">
+								<h3 style="color:#100720 ;">Bilgi Teknolojileri Kurumu Akademi</h3>
+								<p style="color: black;">HTML 5 ile Web Geliştirme</p>
+							</div>
+						</div>
+
+					</div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="fh5co-skills" class="animate-box">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+          <h2 style="color: white">
+            Odaklandığım Yazılım Dilleri ve Frameworkler
+          </h2>
+        </div>
+      </div>
+
+      <!--4 adet-->
+      <div class="row row-pb-md">
+        <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+          <div class="chart" data-percent="80">
+            <span style="color: white"><strong>Asp.Net CORE</strong>80%</span>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+          <div class="chart" data-percent="80">
+            <span style="color: white"><strong>ANGULAR</strong>80%</span>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+          <div class="chart" data-percent="85">
+            <span style="color: white"><strong>MsSQL</strong>85%</span>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+          <div class="chart" data-percent="80">
+            <span style="color: white"><strong>MongoDB</strong>80%</span>
+          </div>
+        </div>
+      </div>
+
+      <!--4 adet-->
+      <div class="row">
+        <div class="col-md-6">
+          <div class="progress-wrap">
+            <h3>
+              <span class="name-left" style="color: #e2dcc8">C#</span
+              ><span style="color: #e2dcc8" class="value-right">80%</span>
+            </h3>
+            <div class="progress">
+              <div
+                class="progress-bar progress-bar-1 progress-bar-striped active"
+                role="progressbar"
+                aria-valuemin="40"
+                aria-valuemax="100"
+                style="width: 80%"
+              ></div>
+            </div>
+          </div>
+          <div class="progress-wrap">
+            <h3>
+              <span class="name-left" style="color: #e2dcc8">Typescript</span
+              ><span style="color: #e2dcc8" class="value-right">85%</span>
+            </h3>
+            <div class="progress">
+              <div
+                class="progress-bar progress-bar-2 progress-bar-striped active"
+                role="progressbar"
+                aria-valuenow="95"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                style="width: 85%"
+              ></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="progress-wrap">
+            <h3>
+              <span class="name-left" style="color: #e2dcc8">CSS</span
+              ><span style="color: #e2dcc8" class="value-right">90%</span>
+            </h3>
+            <div class="progress">
+              <div
+                class="progress-bar progress-bar-5 progress-bar-striped active"
+                role="progressbar"
+                aria-valuenow="90"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                style="width: 90%"
+              ></div>
+            </div>
+          </div>
+          <div class="progress-wrap">
+            <h3>
+              <span class="name-left" style="color: #e2dcc8">HTML</span
+              ><span style="color: #e2dcc8" class="value-right">90%</span>
+            </h3>
+            <div class="progress">
+              <div
+                class="progress-bar progress-bar-3 progress-bar-striped active"
+                role="progressbar"
+                aria-valuenow="85"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                style="width: 90%"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="fh5co-work" class="fh5co-bg-dark">
+    <div class="container">
+      <div class="row animate-box">
+        <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+          <h2>Repolarım</h2>
+        </div>
+      </div>
+
+      <div class="col" *ngFor="let item of link">
+        <div class="col-md-3 text-center col-padding">
+          <a
+            href="{{ item.urls }}"
+            class="work"
+            style="background-image: url(../assets/images/a1.png)"
+          >
+            <div class="desc">
+              <h3>{{ item.title }}</h3>
+              <span style="color: black">{{ item.subtitle }}</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="fh5co-started" class="fh5co-bg-dark">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row animate-box">
+        <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+          <h2>Bana Ulaşın || Hire Me</h2>
+          <p style="color: black">
+            Freelance proje teklifleri için iletişim adreslerimden gün ve saat
+            ayırt etmeksizin ulaşabilirsiniz.
+          </p>
+          <p style="color: black">
+            For freelance project proposals, you can reach my contact addresses
+            regardless of the day and time.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="fh5co-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <p style="color: #e2dcc8">
+            &copy; 2022||Tüm Hakları Saklıdır. <br />Designed by Ömer Faruk
+            Benli ||
+            <a href="" target="_blank" style="color: #e2dcc8"
+              >Bu web sitesi Asp.Net CORE 6.08 ve Angular 14 ile
+              geliştirilmiştir.</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="gototop js-top">
+    <a href="#" class="js-gotop"><i class="icon-arrow-up22"></i></a>
+  </div>
+</div>

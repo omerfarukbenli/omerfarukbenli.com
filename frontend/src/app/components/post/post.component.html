@@ -1,0 +1,29 @@
+
+<div class="container" style="padding-top: 20px; padding-left: 190px;">
+<a class="btn btn-default" [routerLink]="['/posts']"><span style="font-size: 15px;">Blog Sitesine Geri Dönün</span></a>
+</div>
+
+
+
+
+
+<div class="container" style="padding-top: 20px;"  *ngIf="post">
+  <!--*ngIf="post"-->
+  <div class="card" style="width: 800px; margin:0 auto; background-color: rgb(51, 39, 39);">
+    <img  style="width: 798px; height: 400px;"  [src]="post.featuredImageUrl" class="card-img-top" alt="">
+    <div class="card-body">
+      <h3 style="text-align: justify; color: rgb(73, 62, 42);" class="card-title">
+        {{post.title}}
+      </h3>
+      <br>
+      <article class="card-text">
+        <p style="text-align: justify; color: rgb(168, 163, 154);">{{post.content}}</p>
+      </article>
+    </div>
+  </div>
+  <br>
+
+</div>
+<div class="gototop js-top">
+  <a href="#" class="js-gotop"><i class="icon-arrow-up22"></i></a>
+</div>

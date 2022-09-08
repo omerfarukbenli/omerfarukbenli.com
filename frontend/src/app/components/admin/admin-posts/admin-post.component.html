@@ -1,0 +1,27 @@
+<div class="container" style="padding-top: 50px;">
+<a class="btn btn-danger"  [routerLink]="['/posts']"><span style="font-size: 15px;">Portfolio Sitesine Geri Dönün</span></a>
+</div>
+<div class="container">
+  <br>
+  <br>
+  <h1>Blog Yazıları</h1>
+  <br>
+  <br>
+  <a class="btn btn-primary" [routerLink]="['/admin/posts/add']">Yeni ekle </a>
+  <table class="table">
+  <thead>
+    <tr>
+      <th style="color: white;">Title</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let post of post">
+<td style="color: white;">{{post.title}}</td>
+<td>
+  <a  [routerLink]="['/admin/posts', post.id]" >Görüntüle</a>
+</td>
+    </tr>
+  </tbody>
+</table>
+</div>

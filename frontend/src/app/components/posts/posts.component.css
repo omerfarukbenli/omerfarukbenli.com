@@ -1,0 +1,25 @@
+.containers
+{
+  height: 100%;
+  background-color: rgb(184, 143, 93);
+  background-image: url('/assets/images/pe.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+
+.btn-default {
+  background-color: #71c5c5;
+  border-color: #71c5c5;
+
+  border-radius: 25px;
+}
+.btn-default:hover,
+    .btn-default:focus,
+    .btn-default:active    {
+        background-color: rgb(230, 218, 218);
+
+        border-color:rgb(230, 218, 218);
+    }
+

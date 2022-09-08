@@ -1,0 +1,31 @@
+<div class="container" style="padding-top: 80px;  width: 600px; padding-left: 90px;" >
+  <img src="/assets/images/ki.png" style="width: 400px;">
+
+  </div>
+<div class="container" style="padding-top: 100px; width: 600px;">
+<form class="form-signin" #loginForm ="ngForm" (ngSubmit)="login(loginForm)">
+  <div class="container-fluid">
+    <h2 class="form-signin-heading" style="color: white; text-align: center; padding-right: 35px;">Giriş</h2>
+    <div *ngIf="invalidLogin" class="alert alert-danger">Geçersiz kullanıcı adı veya şifre girdiniz </div>
+    <br>
+    <label for="username" class="sr-only">Email address</label>
+    <input type="email" id="username" name="username" ngModel class="form-control" placeholder="Kullanıcı Adı "
+    required autofocus >
+    <br>
+    <label for="password" class="sr-only">Password</label>
+    <input type="password" id="password" name="password" ngModel class="form-control" placeholder="Şifre"
+    required  >
+    <br>
+    <button class="btn btn-lg btn-default btn-block" type="submit"><span style="font-size: 20px">Giriş</span></button>
+    <a class="btn btn-lg btn-primary btn-block" [routerLink]="['/posts']"><span style="font-size: 15px;">Blog Sitesine Geri Dönün</span></a>
+  </div>
+</form>
+
+</div>
+
+
+
+
+
+
+

@@ -1,0 +1,69 @@
+
+
+
+<div class="containers">
+<div class="containerd" style="background-color: rgb(51, 39, 39);">
+
+  <div class="gototop js-top">
+    <a href="#" class="js-gotop"><i class="icon-arrow-up22"></i></a>
+  </div>
+
+  <p style="text-align: center; color: rgb(168, 163, 154); font-size: 40px; padding-top: 10px;">
+
+
+
+
+
+
+<!--bu kod-->
+<button class="btn btn-default" routerLink="" (click)="newPage()" >Portfolyo Sitesine Geri Dön</button>
+    <!-- <a class="btn btn-danger" [routerLink]="['']"><span style="font-size: 15px;">Portfolio Sitesine Geri Dönün</span></a> -->
+
+
+
+
+
+    Ömer Faruk Benli|Kişisel Blog
+
+    <a class="btn btn-default "  [routerLink]="['/login']"><span style="font-size: 15px;">Admin Paneli </span></a>
+  </p>
+
+
+
+</div>
+
+
+<div  class="container" style="padding-top: 20px; " *ngFor="let post of posts">
+
+  <div class="card" style="max-width: 800px; margin:0 auto; background-color: rgb(44, 42, 40);">
+    <img   [src]="post.featuredImageUrl"  style="width: 798px; height: 300px; " class="card-img-top" alt="">
+    <div class="card-body">
+      <h3 class="card-title" style="text-align: justify;  color: rgb(167, 175, 182); padding-top: 5px; padding-bottom: 10px; padding-left: 15px; padding-right: 15px;">
+        {{post.title}}
+      </h3>
+
+      <span style="font-size: 18px;  color: rgb(167, 175, 182); padding-left: 15px; padding-right: 15px; "> Yayınlandığı tarih:{{post.publishDate| date: 'dd.MM.yyyy'}}</span>
+      <br>
+      <hr style="color: black;">
+
+      <article class="card-text" style="padding-top: 10px; color: rgb(167, 175, 182);; padding-left: 15px; padding-right: 15px; text-align: justify;" >
+        {{post.summary}}
+      </article>
+      <p style="font-size: 18px;  color: rgb(167, 175, 182); padding-left: 15px; padding-right: 15px; padding-top: 10px; ">Yazar: {{post.author}}</p>
+      <br>
+     <a class="btn btn-default" [routerLink]="['/post', post.id]">devamını oku</a>
+
+    </div>
+  </div>
+  <br>
+  <!-- <div class="container"  style="max-width: 800px;  height: 100px; margin-bottom: 20px;  background-color: bisque;">
+reklam
+  </div> -->
+
+</div>
+
+</div>
+
+
+
+
